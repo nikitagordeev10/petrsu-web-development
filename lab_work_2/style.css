@@ -67,7 +67,6 @@ p {
     color: #AA00DD;
 }
 
-/* Селектор потомка */
 .style_table_header {
     background-color: #FFEEEE;
     text-align: center;
@@ -82,7 +81,40 @@ p {
     background-color: #FAFFFA;
 }
 
-/*Селектор идентификатора*/
-#separator {
+.separator {
     height: 305px;
+}
+
+.menu_table {
+    border: 1px solid blue;
+    width: 50%;
+    margin: auto;
+
+}
+
+.menu_table td {
+    border: 1px solid blue;
+    margin: auto;
+}
+
+/* Селектор идентификатора */
+
+#body_content {
+    width: 15%;
+}
+
+#body_separator {
+    width: 1%;
+}
+
+#body_body {
+    width: 84%;
+}
+
+#header {
+    width: 100%;
+}
+
+#footer {
+    width: 100%;
 }
