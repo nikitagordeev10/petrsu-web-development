@@ -1,0 +1,36 @@
+/* Селектор элементов */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid black;
+}
+
+td {
+    padding: 5px;
+    vertical-align: top;
+    text-align: left;
+    border: 1px solid black;
+}
+
+/* Селектор класса */
+.text_style_header {
+    color:#FF0099;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+.text_style_content {
+    text-align: left;
+    color: #AA00DD;
+}
+
+.headline {
+    text-transform: uppercase;
+    color: lightblue;
+}
+
+/*Селектор идентификатора*/
+#sidebar {
+    width: 300px;
+    float: left;
+}
