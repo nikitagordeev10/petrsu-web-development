@@ -1,25 +1,29 @@
 /* Селектор элементов */
 
+body {
+    background-image: url("http://kappa.cs.petrsu.ru/~chistyak/html/images/fon.jpg");
+}
+
 h1 {
     text-transform: uppercase;
 }
 
 table {
     width: 100%;
-    border-collapse: collapse;
-    border: 1px solid black;
+    /* border-collapse: collapse;
+    border: 1px solid black; */
 }
 
 td {
     padding: 5px;
     vertical-align: top;
     text-align: left;
-    border: 1px solid black;
+    /* border: 1px solid black; */
 }
 
 p {
     font-size: 21px;
-    color:#336699;
+    color: #336699;
 }
 
 /* Селектор класса */
@@ -29,30 +33,56 @@ p {
     font-family: 'Roboto', sans-serif;
 }
 
+.text_style_content_header {
+    color: #FF0099;
+    text-align: left;
+    font-family: 'Roboto', sans-serif;
+}
+
 .text_style_content {
     text-align: left;
     color: #AA00DD;
 }
 
 .images_left {
-    width:20%; 
+    width: 20%;
     float: left;
     padding: 0 20px 20px 0;
 }
 
+.images_right {
+    width: 20%;
+    float: right;
+    padding: 0 20px 20px 0;
+}
+
 .text_style_menu {
-    color:#336699;
+    color: #336699;
     text-align: center;
     font-family: 'Roboto', sans-serif;
 }
 
+.p_bottom {
+    text-align: right;
+    color: #AA00DD;
+}
+
+/* Селектор потомка */
 .style_table_header {
     background-color: #FFEEEE;
     text-align: center;
 }
 
+.style_table_text_center {
+    background-color: #FAFFFA;
+    text-align: center;
+}
+
+.style_table_text_left {
+    background-color: #FAFFFA;
+}
+
 /*Селектор идентификатора*/
-#sidebar {
-    width: 300px;
-    float: left;
+#separator {
+    height: 305px;
 }
