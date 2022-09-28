@@ -1,4 +1,9 @@
 /* Селектор элементов */
+
+h1 {
+    text-transform: uppercase;
+}
+
 table {
     width: 100%;
     border-collapse: collapse;
@@ -12,9 +17,14 @@ td {
     border: 1px solid black;
 }
 
+p {
+    font-size: 21px;
+    color:#336699;
+}
+
 /* Селектор класса */
 .text_style_header {
-    color:#FF0099;
+    color: #FF0099;
     text-align: center;
     font-family: 'Roboto', sans-serif;
 }
@@ -24,9 +34,21 @@ td {
     color: #AA00DD;
 }
 
-.headline {
-    text-transform: uppercase;
-    color: lightblue;
+.images_left {
+    width:20%; 
+    float: left;
+    padding: 0 20px 20px 0;
+}
+
+.text_style_menu {
+    color:#336699;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+.style_table_header {
+    background-color: #FFEEEE;
+    text-align: center;
 }
 
 /*Селектор идентификатора*/
