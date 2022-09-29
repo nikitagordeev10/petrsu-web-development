@@ -1,0 +1,98 @@
+#top {
+    /* Шапка с заголовком страницы */
+    background: #ffffff;
+    /* Цвет фона */
+    border: solid 1px black;
+    /* Параметры рамки  */
+    padding: 10px 0 10px 10px;
+    /* Поля вокруг текста */
+    margin-bottom: 5px;
+    /* Расстояние между шапкой и колонками */
+    font-size: 24px;
+    /* Размер шрифта */
+    font-weight: bold;
+    /* Жирное начертание */
+    text-align: center;
+}
+
+#navigation {
+    /* Шапка с заголовком страницы */
+    background: #ffffff;
+    /* Цвет фона */
+    border: solid 1px black;
+    /* Параметры рамки  */
+    padding: 10px 0 10px 10px;
+    /* Поля вокруг текста */
+    margin-bottom: 5px;
+    /* Расстояние между шапкой и колонками */
+    font-size: 24px;
+    /* Размер шрифта */
+    font-weight: bold;
+    /* Жирное начертание */
+}
+
+#menu {
+    /* Меню сайта */
+    width: 200px;
+    /* Ширина меню */
+    background: #ffffff;
+    /* Цвет фона */
+    border: solid 1px black;
+    /* Параметры рамки */
+    float: left;
+    /* Состыковка со слоем контента по горизонтали */
+    padding: 3px;
+    /* Внутренние поля */
+}
+
+#content {
+    /* Основное содержание */
+    background: #ffffff;
+    /* Цвет фона */
+    border: solid 1px black;
+    /* Параметры рамки */
+    margin-left: 210px;
+    /* Отступ слева с учетом ширины левой колонки */
+    margin-bottom: 5px
+        /* Отступ снизу */
+}
+
+#content p {
+    padding: 3px;
+    /* Внутренние поля контента*/
+}
+
+#bottom {
+    /* Подвал */
+    background: #ffffff;
+    /* Цвет фона */
+    border: solid 1px black;
+    /* Параметры рамки */
+    padding: 3px;
+    /* Поля вокруг текста */
+}
+
+.grid {
+    border: solid 1px black;
+    display: table;
+    width: 100%;
+    border: none;
+    border-collapse: separate;
+    border-spacing: 5px;
+
+}
+
+.grid-tr {
+    border: solid 1px black;
+    background: #f4f6ff;
+    display: table-row;
+}
+
+.grid-td {
+    border: solid 1px black;
+    display: table-cell;
+    width: 33.3%;
+    vertical-align: top;
+    padding: 0;
+    background: #f4f6ff;
+}
