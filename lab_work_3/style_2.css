@@ -43,6 +43,7 @@
     /* Состыковка со слоем контента по горизонтали */
     padding: 3px;
     /* Внутренние поля */
+
 }
 
 #content {
@@ -82,17 +83,26 @@
 
 }
 
-.grid-tr {
-    border: solid 1px black;
-    background: #f4f6ff;
-    display: table-row;
-}
-
 .grid-td {
     border: solid 1px black;
-    display: table-cell;
-    width: 33.3%;
     vertical-align: top;
-    padding: 0;
+    padding: 0 15px;
+    margin-top: 10px;
     background: #f4f6ff;
 }
+
+.square { 
+    border: 5px solid gray;
+    position: relative;
+    text-align: center;
+    width: 5vw;
+    height: 5vw;
+  }
+
+  .element { 
+    border: 5px solid gray;
+    position: relative;
+    text-align: center;
+    width: 4vw;
+    height: 3vw;
+  }
