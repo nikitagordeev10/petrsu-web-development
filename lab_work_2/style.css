@@ -1,7 +1,12 @@
-/* Селектор элементов */
+/* Селектор тегов */
 
 body {
     background-image: url("http://kappa.cs.petrsu.ru/~chistyak/html/images/fon.jpg");
+}
+
+a {
+    text-decoration: none !important;
+    border: none !important;
 }
 
 h1 {
@@ -117,4 +122,26 @@ p {
 
 #footer {
     width: 100%;
+}
+
+/* Селектор тегов  */
+
+/* Селектор атрибутов */
+a[href="1_introduction.html"] { font-style: italic; }
+
+/* Селектор пседоэлементов */
+a:link {
+    color: #033;
+}
+
+a:visited {
+    color: #606;
+}
+
+a:hover {
+    color: #f00;
+}
+
+a:active {
+    color: #ff0;
 }
