@@ -1,0 +1,28 @@
+/* ================== list.html ================== */
+
+.grid {
+    display: table;
+    width: 100%;
+    border: none;
+    border-collapse: separate;
+    border-spacing: 5px;
+}
+
+.grid-tr {
+    display: table-row;
+}
+
+.grid-td {
+    display: table-cell;
+    width: 33.3%;
+    vertical-align: top;
+    padding: 0;
+}
+
+.item {
+    background: #e07272;
+    color: #fff;
+    text-align: center;
+    margin: 0;
+    padding: 20px 0;
+}
