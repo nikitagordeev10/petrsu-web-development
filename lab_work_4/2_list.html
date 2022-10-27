@@ -1,49 +1,57 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html>
 
-<head>
-    <meta http-equiv="content-type" content="text/html; charset=utf-8">
-    <meta name="viewport" content="width=960">
-    <title>Title</title>
-    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="style.css">
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CSS Grid Layout</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
 <body>
-    <div class="wrapper">
-        <header class="header">
-            <div class="wrp">
-                <p>Header</p>
-            </div>
+    <div class="container">
+
+        <header>
+            <nav>
+                <li><a href="1_main.html">
+                        <h1>Главная</h1>
+                    </a></li>
+                <li><a href="2_list.html">Список</a></li>
+                <li><a href="3_internal_page.html">Внутренняя</a></li>
+            </nav>
+
+            <button>Подписаться</button>
         </header>
 
-        <div class="middle">
-            <div class="wrp">
-                <div class="container">
-                    <main class="content">
-                        <p>Content</p>
-                    </main>
-                </div>
-                <aside class="leftcol">
-                    <p>
-                        Left <br>
-                        <a href="main.html">Главная</a> <br><br>
-                        <a href="list.html">Список</a> <br><br>
-                        <a href="internal_page.html">Внутренняя страница</a> <br><br>
-                    </p>
-                </aside>
-                <aside class="rightcol">
-                    <p>Right</p>
-                </aside>
-            </div>
-        </div>
+        <section class="main">
+            <h2>Экранизации и постановки</h2>
+
+            <p>Жила однажды в далекой деревушке маленькая прелестная девочка. Ее мать и бабушка любили ее без памяти.
+                Бабушка сшила ей красную шапочку, которая была ей так к лицу, что все и стали звать девочку Красной
+                Шапочкой. <br><br> Однажды мама напекла целый противень пирогов и говорит дочке: <br>- Красная Шапочка,
+                бабушка заболела. Не отнесешь ли ты ей пирожков и горшочек свежевзбитого масла, как
+                это указано в приведеной ниже табличке?
+            </p>
+
+        </section>
+
+        <aside class="sidebar">
+            <h3>Происхождение сюжета</h3><br>
+            <p>Сюжет о девочке, обманутой волком, был распространён во Франции и Италии со Средних веков. В альпийских
+                предгорьях и в Тироле сказка, известная там по меньшей мере с XIV века, пользовалась особой
+                популярностью. Содержимое корзинки варьировалось: в Северной Италии внучка несла бабушке свежую рыбу,
+                в Швейцарии — головку молодого сыра, на юге Франции — пирожок и горшочек масла.</p>
+        </aside>
+
+
+        <footer>
+            <h3>Подписаться на рассылку книг</h3>
+            <p>Сказка Красная Шапочка - Шарль Перро.</p>
+        </footer>
+
     </div>
 
-    <footer class="footer">
-        <div class="wrp">
-            <p>Footer</p>
-        </div>
-    </footer>
+
 </body>
 
 </html>

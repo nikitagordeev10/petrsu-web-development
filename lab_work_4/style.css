@@ -18,7 +18,7 @@ body {
 /* Page Layout */
 
 .container {
-	max-width: 900px;
+	max-width: 1400px;
 	background-color: #fff;
 	margin: 0 auto;
 	padding: 0 60px;
@@ -36,6 +36,7 @@ body {
 
 header {
 	grid-area: header;
+	border: 1px solid #a2a2a2;
 
 	color: #ef5350;
 	padding: 20px 0;
@@ -76,20 +77,28 @@ header button {
 .main {
 	grid-area: main;
 
-	text-align: center;
+	text-align: left;
 }
 
 .main h2 {
 	font-size: 32px;
 	margin-bottom: 55px;
+	border: 1px solid #a2a2a2;
+
 }
 
 .main p {
+	border: 1px solid #a2a2a2;
+
 	margin-bottom: 50px;
 }
 
 .main img {
-	width: 100%;
+	border: 1px solid #a2a2a2;
+	width: 49%;
+	height: auto;
+	aspect-ratio: 1; /* will make width equal to height (500px container) */
+	object-fit: cover; /* use the one you need */
 }
 
 
@@ -110,6 +119,8 @@ footer {
 	color: #ef5350;
 	text-align: center;
 	padding: 20px 0;
+	border: 1px solid #a2a2a2;
+
 }
 
 footer p {
