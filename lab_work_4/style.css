@@ -1,3 +1,5 @@
+/* Разметка всей страницы */
+
 * {
 	margin: 0;
 	padding: 0;
@@ -15,8 +17,6 @@ body {
 	font: normal 16px sans-serif;
 }
 
-/* Page Layout */
-
 .container {
 	max-width: 1400px;
 	background-color: #fff;
@@ -32,9 +32,9 @@ body {
 	grid-gap: 60px;
 }
 
-/* Header */
+/* Верхний колонтитул */
 
-header {
+.header {
 	grid-area: header;
 	border: 1px solid #a2a2a2;
 
@@ -45,25 +45,18 @@ header {
 	grid-template-columns: 1fr 1fr;
 }
 
-header nav {
+.header>nav {
 	justify-self: start;
-
 	list-style: none;
-
-	/*  This did not work well, inline-block used instead */
-	/*  display: grid;
-    grid-template-columns: auto 1fr 1fr;
-    align-items: end;*/
 }
 
-header nav li {
+.header>nav>li {
 	margin-right: 15px;
 	display: inline-block;
 }
 
-header button {
+.header>button {
 	justify-self: end;
-
 	background-color: #ef5350;
 	border: none;
 	padding: 8px 25px;
@@ -72,7 +65,7 @@ header button {
 	text-transform: uppercase;
 }
 
-/* Main Section */
+/* Главный раздел */
 
 .main {
 	grid-area: main;
@@ -80,29 +73,136 @@ header button {
 	text-align: left;
 }
 
-.main h2 {
+.main>h2 {
 	font-size: 32px;
 	margin-bottom: 55px;
 	border: 1px solid #a2a2a2;
 
 }
 
-.main p {
+.main>p {
 	border: 1px solid #a2a2a2;
 
 	margin-bottom: 50px;
 }
 
-.main img {
+.main>h3 {
 	border: 1px solid #a2a2a2;
-	width: 49%;
-	height: auto;
-	aspect-ratio: 1; /* will make width equal to height (500px container) */
-	object-fit: cover; /* use the one you need */
+	margin-top: 30px;
+	margin-bottom: 10px;
 }
 
 
-/* Sidebar */
+.main>img {
+	border: 1px solid #a2a2a2;
+	width: 49%;
+	height: auto;
+	aspect-ratio: 1;
+	/* will make width equal to height (500px container) */
+	object-fit: cover;
+	/* use the one you need */
+}
+
+
+/* Список */
+.grid-1-1 {
+	/* padding-top: 40px; */
+	display: grid;
+	margin: 0 auto;
+	grid-template-columns: repeat(5, 1fr);
+	grid-template-rows: repeat(5, 1fr);
+	grid-gap: 2px;
+	grid-auto-flow: row dense;
+}
+
+/* items */
+
+.grid-1-1 div {
+	color: white;
+	font-size: 20px;
+	padding: 2px;
+
+}
+
+/* specific item styles */
+
+.item-1-1 {
+	background: #b03532;
+}
+
+.item-1-2 {
+	background: #33a8a5;
+}
+
+.item-1-3 {
+	background: #ff9069;
+}
+
+.item-1-4 {
+	background: #6a478f;
+}
+
+.item-1-5 {
+	background: #3d8bb1;
+}
+
+.item-1-6 {
+	background: #4464a1;
+}
+
+.item-1-7 {
+	background: #e03f3f;
+	grid-column: span 2;
+	grid-row: span 2;
+}
+
+.item-1-8 {
+	background: #59a627;
+}
+
+.item-1-9 {
+	background: #b03532;
+	grid-column: span 2;
+	grid-row: span 2;
+}
+
+.item-1-10 {
+	background: #4464a1;
+}
+
+.item-1-11 {
+	background: #33a8a5;
+}
+
+.item-1-12 {
+	background: #ff9069;
+}
+
+.item-1-13 {
+	background: #3d8bb1;
+}
+
+.item-1-14 {
+	background: #da6f2b;
+}
+
+.item-1-15 {
+	background: #59a627;
+}
+
+.item-1-16 {
+	background: #30997a;
+}
+
+.item-1-17 {
+	background: #6a478f;
+}
+
+.item-1-18 {
+	background: #da6f2b;
+}
+
+/* Боковая панель */
 
 .sidebar {
 	grid-area: sidebar;
@@ -111,9 +211,9 @@ header button {
 	padding: 20px;
 }
 
-/* Footer */
+/* Нижний колонтитул */
 
-footer {
+.footer {
 	grid-area: footer;
 
 	color: #ef5350;
@@ -123,12 +223,14 @@ footer {
 
 }
 
-footer p {
+.footer p {
 	color: #777;
 	font-size: 12px;
 	padding: 10px;
 }
 
+
+/* Адаптация под разные разрешения экранов */
 
 @media (max-width: 600px) {
 	.container {
@@ -139,5 +241,66 @@ footer p {
 			"main"
 			"sidebar"
 			"footer";
+	}
+}
+
+@media screen and (min-width: 700px) {
+	.connect p {
+		font-size: 28px;
+	}
+}
+
+@media screen and (min-width: 600px) and (max-width: 699px) {
+	.connect p {
+		font-size: 25px;
+	}
+}
+
+@media screen and (min-width: 500px) and (max-width: 599px) {
+	.connect p {
+		font-size: 21px;
+	}
+}
+
+@media screen and (min-width: 300px) and (max-width: 499px) {
+	.connect p {
+		font-size: 14px;
+	}
+}
+
+@media screen and (max-width: 700px) {
+	.grid-1-1 div {
+		width: 100%;
+		max-width: 750px;
+		color: white;
+		font-size: 20px;
+		padding: 2px;
+		overflow-x: scroll;
+		overflow-y: scroll;
+	}
+
+	.item-1-1,
+	.item-1-2,
+	.item-1-3,
+	.item-1-4,
+	.item-1-5,
+	.item-1-6,
+	.item-1-8,
+	.item-1-10,
+	.item-1-11,
+	.item-1-12,
+	.item-1-13,
+	.item-1-14,
+	.item-1-15,
+	.item-1-16,
+	.item-1-17,
+	.item-1-18 {
+		max-height: 100px;
+	}
+
+	.item-1-7, .item-1-9 {
+		max-height: 200px;
+		grid-column: span 2;
+		grid-row: span 2;
 	}
 }
