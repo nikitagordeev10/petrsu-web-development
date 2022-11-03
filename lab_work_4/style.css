@@ -34,7 +34,7 @@ body {
 
 /* Верхний колонтитул */
 
-.header {
+header {
 	grid-area: header;
 	border: 1px solid #a2a2a2;
 
@@ -45,17 +45,17 @@ body {
 	grid-template-columns: 1fr 1fr;
 }
 
-.header>nav {
+header>nav {
 	justify-self: start;
 	list-style: none;
 }
 
-.header>nav>li {
+header>nav>li {
 	margin-right: 15px;
 	display: inline-block;
 }
 
-.header>button {
+header>button {
 	justify-self: end;
 	background-color: #ef5350;
 	border: none;
@@ -97,109 +97,177 @@ body {
 	border: 1px solid #a2a2a2;
 	width: 49%;
 	height: auto;
+	margin-bottom: 2%;
 	aspect-ratio: 1;
-	/* will make width equal to height (500px container) */
 	object-fit: cover;
-	/* use the one you need */
 }
 
+.left_img {
+	float: left;
+}
 
-/* Список */
-.grid-1-1 {
+.right_img {
+	float: right;
+}
+
+/* Списки grid*/
+
+.grid-1,
+.grid-2,
+.grid-3,
+.grid-4,
+.grid-5 {
 	/* padding-top: 40px; */
 	display: grid;
 	margin: 0 auto;
-	grid-template-columns: repeat(5, 1fr);
-	grid-template-rows: repeat(5, 1fr);
-	grid-gap: 2px;
+	grid-gap: 5px;
 	grid-auto-flow: row dense;
 }
 
-/* items */
-
-.grid-1-1 div {
-	color: white;
-	font-size: 20px;
-	padding: 2px;
-
+.grid-1 div,
+.grid-2 div,
+.grid-3 div,
+.grid-4 div,
+.grid-5 div {
+	border: 1px solid #a2a2a2;
+	/* color: white; */
+	color: black;
+	/* font-size: 20px; */
+	padding: 5px;
+	/* opacity: .5; */
 }
 
-/* specific item styles */
+.item-4-1 {
+	background: rgba(176, 53, 50, 0.5);
+}
 
+.item-4-2,
+.item-4-11 {
+	background: rgba(51, 168, 165, 0.5);
+}
+
+.item-3-1,
+.item-4-3 {
+	background: rgba(255, 144, 105, 0.5);
+}
+
+.item-4-4,
+.item-4-17 {
+	background: rgba(106, 71, 143, 0.5);
+}
+
+.item-4-5,
+.item-4-13 {
+	background: rgba(61, 139, 177, 0.5);
+}
+
+.item-4-6,
+.item-4-10 {
+	background: rgba(68, 100, 161, 0.5);
+}
+
+.item-4-7 {
+	background: rgba(224, 63, 63, 0.5);
+	grid-column: span 2;
+	grid-row: span 2;
+}
+
+.item-5-1 {
+	background: rgba(17, 226, 255, 0.5);
+}
+
+.item-2-2,
+.item-4-8 {
+	background: rgba(89, 166, 39, 0.5);
+}
+
+.item-4-15 {
+	background: rgba(176, 53, 50, 0.5);
+	grid-column: span 2;
+	grid-row: span 2;
+}
+
+.item-4-12 {
+	background: rgba(255, 144, 105, 0.5);
+}
+
+.item-4-9,
 .item-1-1 {
-	background: #b03532;
+	background: rgba(250, 255, 0, 0.5);
 }
 
+.item-3-2,
 .item-1-2 {
-	background: #33a8a5;
+	background: rgba(5, 0, 255, 0.5);
 }
 
-.item-1-3 {
-	background: #ff9069;
+.item-2-1,
+.item-5-2 {
+	background: rgba(255, 0, 107, 0.5);
 }
 
-.item-1-4 {
-	background: #6a478f;
+.item-4-14,
+.item-4-18 {
+	background: rgba(218, 111, 43, 0.5);
 }
 
-.item-1-5 {
-	background: #3d8bb1;
+.item-2-3,
+.item-4-16 {
+	background: rgba(48, 153, 122, 0.5);
 }
 
-.item-1-6 {
-	background: #4464a1;
+/* Список 1*/
+
+.grid-1 {
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: repeat(1, 1fr);
 }
 
-.item-1-7 {
-	background: #e03f3f;
-	grid-column: span 2;
-	grid-row: span 2;
+/* Список 2*/
+
+.grid-2 {
+	grid-template-columns: repeat(1, 1fr);
+	grid-template-rows: repeat(3, 1fr);
 }
 
-.item-1-8 {
-	background: #59a627;
+/* Список 3*/
+
+.grid-3 {
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: repeat(1, 1fr);
 }
 
-.item-1-9 {
-	background: #b03532;
-	grid-column: span 2;
-	grid-row: span 2;
+/* Список 4*/
+
+.grid-4 {
+	grid-template-columns: repeat(5, 1fr);
+	grid-template-rows: repeat(5, 1fr);
 }
 
-.item-1-10 {
-	background: #4464a1;
+/* Список 5*/
+
+.grid-5 {
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: repeat(1, 1fr);
 }
 
-.item-1-11 {
-	background: #33a8a5;
+/* Врезка дополнительного контента */
+.about {
+	/* float: right; */
+	background: #F3F0E9;
+	border: 1px solid #cbc8c5;
+	padding: 0 10px;
+	/* margin: 5px 0 5px 10px; */
+	/* margin-top: -40px; */
+	margin-bottom: 40px;
+	/* width: 400px; */
+	font-size: 0.9em;
 }
 
-.item-1-12 {
-	background: #ff9069;
-}
-
-.item-1-13 {
-	background: #3d8bb1;
-}
-
-.item-1-14 {
-	background: #da6f2b;
-}
-
-.item-1-15 {
-	background: #59a627;
-}
-
-.item-1-16 {
-	background: #30997a;
-}
-
-.item-1-17 {
-	background: #6a478f;
-}
-
-.item-1-18 {
-	background: #da6f2b;
+.about>p {
+	padding: 10px;
+	margin: 0.6em 0;
+	font-size: 15px;
 }
 
 /* Боковая панель */
@@ -213,7 +281,7 @@ body {
 
 /* Нижний колонтитул */
 
-.footer {
+footer {
 	grid-area: footer;
 
 	color: #ef5350;
@@ -223,7 +291,7 @@ body {
 
 }
 
-.footer p {
+footer>p {
 	color: #777;
 	font-size: 12px;
 	padding: 10px;
@@ -234,7 +302,6 @@ body {
 
 @media (max-width: 600px) {
 	.container {
-		/*  Redefine the grid into a single column layout. */
 		grid-template-columns: 1fr;
 		grid-template-areas:
 			"header"
@@ -244,36 +311,18 @@ body {
 	}
 }
 
-@media screen and (min-width: 700px) {
-	.connect p {
-		font-size: 28px;
-	}
-}
-
-@media screen and (min-width: 600px) and (max-width: 699px) {
-	.connect p {
-		font-size: 25px;
-	}
-}
-
-@media screen and (min-width: 500px) and (max-width: 599px) {
-	.connect p {
-		font-size: 21px;
-	}
-}
-
-@media screen and (min-width: 300px) and (max-width: 499px) {
-	.connect p {
-		font-size: 14px;
-	}
-}
-
 @media screen and (max-width: 700px) {
-	.grid-1-1 div {
+
+	/* .grid-flex-1, */
+	.grid-1 div,
+	.grid-2 div,
+	.grid-3 div,
+	.grid-4 div,
+	.grid-5 div {
 		width: 100%;
 		max-width: 750px;
-		color: white;
-		font-size: 20px;
+		/* color: white; */
+		/* font-size: 20px; */
 		padding: 2px;
 		overflow-x: scroll;
 		overflow-y: scroll;
@@ -281,26 +330,45 @@ body {
 
 	.item-1-1,
 	.item-1-2,
-	.item-1-3,
-	.item-1-4,
-	.item-1-5,
-	.item-1-6,
-	.item-1-8,
-	.item-1-10,
-	.item-1-11,
-	.item-1-12,
-	.item-1-13,
-	.item-1-14,
-	.item-1-15,
-	.item-1-16,
-	.item-1-17,
-	.item-1-18 {
+	.item-2-1,
+	.item-2-2,
+	.item-2-3,
+	.item-3-1,
+	.item-3-2,
+	.item-4-1,
+	.item-4-2,
+	.item-4-3,
+	.item-4-4,
+	.item-4-5,
+	.item-4-6,
+	.item-4-8,
+	.item-4-10,
+	.item-4-11,
+	.item-4-12,
+	.item-4-13,
+	.item-4-14,
+	.item-4-15,
+	.item-4-16,
+	.item-4-17,
+	.item-4-18,
+	.item-5-1,
+	.item-5-2 {
 		max-height: 100px;
 	}
 
-	.item-1-7, .item-1-9 {
+	.item-4-7,
+	.item-4-9 {
 		max-height: 200px;
 		grid-column: span 2;
 		grid-row: span 2;
+	}
+
+	.main>img {
+		border: 1px solid #a2a2a2;
+		width: 49%;
+		height: auto;
+		margin-bottom: 2%;
+		aspect-ratio: 1;
+		object-fit: cover;
 	}
 }
