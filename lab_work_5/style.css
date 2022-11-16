@@ -1,0 +1,54 @@
+/* Разделитель */
+hr {
+    margin: 30px 100px;
+    border: 0;
+    border-top: 1px solid #c9c7c7;
+}
+
+/* Отступ от края экрана */
+h1,
+h2,
+h3,
+p,
+.checkbox,
+.form,
+.Validate_Required,
+.box,
+.counter,
+#counter1,
+#phone,
+textarea {
+    /* text-align: center; */
+    margin-left: 30%;
+}
+
+/* Всплывающее окно */
+.box {
+    display: none;
+}
+
+/*  */
+input[type="text"],
+input[type="email"],
+input[type="url"] {
+    width: 400px;
+}
+
+.counter {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    line-height: 15px;
+    text-align: center;
+    border: 1px dashed grey;
+    margin: 0px 0;
+}
+
+.counter:hover {
+    cursor: pointer;
+    background-color: #360581;
+}
+
+.form input {
+    display: block;
+}

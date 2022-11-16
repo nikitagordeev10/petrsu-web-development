@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gordeev_lab_5</title>
+</head>
+
+<!-- Вынесение CSS в отдельный файл -->
+<link rel="stylesheet" type="text/css" href="style.css">
+
+<!-- Вынесение JavaScript в отдельный файл -->
+<script type="text/javascript" src="script.js"> </script>
+
+<body>
+    <!-- 
+    Действие - позволяет указать форме, куда перейти после отправки (обычно это имя файла скрипта, который будет считывать и обрабатывать отправленные данные формы).
+    Имя - используется для уникальной идентификации вашей формы на данной странице.
+    Метод - значение этого должно быть POST Это указывает форме, как отправить данные после отправки.
+     -->
+    <form name="my form" method="POST">
+        <h1>Оценка качества товаров магазина N</h1>
+
+        <hr>
+
+        <!-- Взаимодействие с пользователем(вывод данных формы, сообщения о не заполненных/не правильно заполненных полях) должно осуществляться без использования стандартных модальных окон alert, confirm, promt.  -->
+        <h3>Расскажите о себе:</h3>
+        <p>Имя: <input type="text" name="name" placeholder="Иван Иванов" required></p>
+        <p>Email: <input type="email" name="email" placeholder="ivanivanov@yandex.ru" required></p>
+        <p>ВК: <input type="url" name="site" placeholder="https://vk.com/ivanivanov" required></p>
+
+        <!-- добавление полей в случае желания пользователя (кнопка "+" для указания второго, третьего и т.д. номера телефона).  -->
+        <form>
+            <div id="profile">
+                <p>Телефон:
+                    <input type="phone" class="link" placeholder="+1(234)567-89-10">
+                <div id="counter1" class="counter" onclick="addInput()">+</div>
+                <div id="counter2" class="counter" onclick="delInput()">-</div>
+                </p>
+            </div>
+        </form>
+
+        <hr>
+
+        <!-- Проверка обязательности полей, шаблона ввода может осуществляться как средствами HTML5 так и средствами javascript.  -->
+        <h3>Вопрос 1:</h3>
+        <p>Укажите, пожалуйста, из каких источников Вы узнали о нашем магазине?</p>
+        <p>
+            <input type="checkbox" name="Apples" value="Apples">Печатные СМИ<br>
+            <input type="checkbox" name="Oranges" value="Oranges">Реклама на ТВ<br>
+            <input type="checkbox" name="Bananas" value="Bananas">Реклама на радио<br>
+            <input type="checkbox" name="Bananas" value="Bananas">Наружная реклама<br>
+            <input type="checkbox" name="Bananas" value="Bananas">Интернет<br>
+            <input type="checkbox" name="Bananas" value="Bananas">Рекомендации друзей/знакомых
+        </p>
+
+        <hr>
+
+        <h3>Вопрос 2:</h3>
+        <p>Как часто Вы совершаете покупки в нашем магазине?</p>
+        <p>
+            <input type="radio" name="sex" value="male">Часто, являюсь постоянным клиентом<br>
+            <input type="radio" name="sex" value="male">Время от времени<br>
+            <input type="radio" name="sex" value="male">Совершил покупки впервые<br>
+        </p>
+
+        <hr>
+
+        <!-- Часть полей формы должна появляться только после выбора определенных значения (напр.: вывод видов спорта при выборе хобби спорт, появление input при выборе в выпадающем списке "свой вариант"),  -->
+        <h3>Сотрудничество:</h3>
+        <p>Выберите тип документа из выпадающего списка:</p>
+        <select id="actSelect" class="Validate_Required " name="actSelect" onchange="Selected(this.value)">
+            <option value="0" selected="selected">-</option>
+            <option value="1">Бухгалтерский документ</option>
+            <option value="2">Договор</option>
+            <option value="3">Дополнительное соглашение</option>
+            <option value="4">Письмо</option>
+            <option value="5">Приказ</option>
+        </select>
+
+        <div id="Block0" class="box"><br /></div>
+
+        <div id="Block1" class="box"><br />
+            Выберите документ:
+            <select>
+                <option value="" selected="selected">-</option>
+                <option value="a">Акт</option>
+                <option value="b">Накладная</option>
+                <option value="c">Счет-фактура</option>
+            </select>
+        </div>
+
+        <div id="Block2" class="box"><br />
+            Предмет договора:
+            <select>
+                <option value="" selected="selected">-</option>
+                <option value="a">Выполнение работ</option>
+                <option value="b">Оказание услуг</option>
+                <option value="c">Поставка</option>
+            </select>
+        </div>
+
+        <div id="Block3" class="box"><br />
+            Предмет соглашения:
+            <select>
+                <option value="" selected="selected">-</option>
+                <option value="a">Изменение цены</option>
+                <option value="b">Изменение сроков</option>
+                <option value="b">Изменение объемов</option>
+            </select>
+        </div>
+
+        <div id="Block4" class="box"><br />
+            Выберите тип письма:
+            <select>
+                <option value="" selected="selected">-</option>
+                <option value="a">Входящее</option>
+                <option value="b">Исходящее</option>
+            </select>
+        </div>
+
+        <div id="Block5" class="box"><br />
+            <form method="post" action="index.php">
+                Полное название организации <br />
+                <textarea cols="40" rows="2" name="fullname"></textarea><br />
+                Короткое название организации <br />
+                <input type="text" name="smallname" /><br />
+                ИНН организации <br />
+                <input type="text" name="inn" /><br />
+                КПП организации <br />
+                <input type="text" name="kpp" /><br />
+                Индекс организации <br />
+                <input type="text" name="ind" /><br />
+                Страна расположения организации <br />
+                <input type="text" name="strana" /><br />
+                Город организации <br />
+                <input type="text" name="gorod" /><br />
+                Адрес организации <br />
+                <input type="text" name="adress" />
+            </form>
+        </div>
+
+        <hr>
+
+        <h3>Оставьте отзыв:</h3>
+        <textarea rows="5" cols="30"></textarea>
+
+        <hr>
+
+        <!-- Вывод данных с формы по нажатию кнопки отправить должен осуществляться в форматированном виде во всплывающем окне оформленном средствами CSS (с затемнением страницы, кнопкой закрыть). -->
+        <h2>Отправка:</h2>
+        <p><input type="submit" value="Отправить" /></p>
+    </form>
+
+    <hr>
+
+    <p>Работу выполнил студент группы 22207, Гордеев Никита</p>
+</body>
+
+</html>
