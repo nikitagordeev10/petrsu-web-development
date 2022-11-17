@@ -20,7 +20,7 @@
     Имя - используется для уникальной идентификации вашей формы на данной странице.
     Метод - значение этого должно быть POST Это указывает форме, как отправить данные после отправки.
      -->
-    <form name="my form" method="POST">
+    <form name="Test" method="POST" onsubmit="alert('submit!');return false">
         <h1>Оценка качества товаров магазина N</h1>
 
         <hr>
@@ -32,15 +32,14 @@
         <p>ВК: <input type="url" name="site" placeholder="https://vk.com/ivanivanov" required></p>
 
         <!-- добавление полей в случае желания пользователя (кнопка "+" для указания второго, третьего и т.д. номера телефона).  -->
-        <form>
-            <div id="profile">
-                <p>Телефон:
-                    <input type="phone" class="link" placeholder="+1(234)567-89-10">
-                <div id="counter1" class="counter" onclick="addInput()">+</div>
-                <div id="counter2" class="counter" onclick="delInput()">-</div>
-                </p>
-            </div>
-        </form>
+        <div id="profile">
+            <p>Телефон:
+                <input type="tel" id="phone" name="phone" placeholder="+1(234)567-89-10" pattern="[+]{1}[0-9]{11,14}"
+                    required>
+            <div id="counter1" class="counter" onclick="addInput()">+</div>
+            <div id="counter2" class="counter" onclick="delInput()">-</div>
+            </p>
+        </div>
 
         <hr>
 
@@ -122,36 +121,37 @@
         </div>
 
         <div id="Block5" class="box"><br />
-            <form method="post" action="index.php">
-                Полное название организации <br />
-                <textarea cols="40" rows="2" name="fullname"></textarea><br />
-                Короткое название организации <br />
-                <input type="text" name="smallname" /><br />
-                ИНН организации <br />
-                <input type="text" name="inn" /><br />
-                КПП организации <br />
-                <input type="text" name="kpp" /><br />
-                Индекс организации <br />
-                <input type="text" name="ind" /><br />
-                Страна расположения организации <br />
-                <input type="text" name="strana" /><br />
-                Город организации <br />
-                <input type="text" name="gorod" /><br />
-                Адрес организации <br />
-                <input type="text" name="adress" />
-            </form>
+            Полное название организации <br />
+            <textarea id="org_name" cols="40" rows="2" name="fullname"></textarea><br />
+            Короткое название организации <br />
+            <input type="text" name="smallname" /><br />
+            ИНН организации <br />
+            <input type="text" name="inn" /><br />
+            КПП организации <br />
+            <input type="text" name="kpp" /><br />
+            Индекс организации <br />
+            <input type="text" name="ind" /><br />
+            Страна расположения организации <br />
+            <input type="text" name="strana" /><br />
+            Город организации <br />
+            <input type="text" name="gorod" /><br />
+            Адрес организации <br />
+            <input type="text" name="adress" />
         </div>
 
         <hr>
 
         <h3>Оставьте отзыв:</h3>
-        <textarea rows="5" cols="30"></textarea>
+        <textarea id="feedback" rows="5" cols="30"></textarea>
 
         <hr>
 
         <!-- Вывод данных с формы по нажатию кнопки отправить должен осуществляться в форматированном виде во всплывающем окне оформленном средствами CSS (с затемнением страницы, кнопкой закрыть). -->
         <h2>Отправка:</h2>
         <p><input type="submit" value="Отправить" /></p>
+
+        <p><INPUT TYPE="submit" NAME="bt" VALUE="Щелкни здесь!" onClick="btnClick();"></p>
+        <div id="ex1"></div>
     </form>
 
     <hr>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    #blablabla {
+        display: none;
+        animation-duration: 1.5s;
+        animation-fill-mode: both;
+        animation-name: fadeIn;
+    }
+
+    #blablabla.open {
+        display: block;
+    }
+
+    .popup {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background: rgba(17, 17, 17, 0.5);
+        transition: all 0.5s ease;
+        display: none;
+    }
+
+    .popup_open {
+        display: block;
+    }
+
+    .popup__container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: #fff;
+        border-radius: 10px;
+        max-width: 588px;
+        width: 100%;
+    }
+
+    .popup__wrapper {
+        padding: 40px;
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+
+    #name{
+        line-height: 0px;
+    }
+</style>
+
+<body>
+    <form id="MyForm" method="POST">
+        <input type="text" placeholder="Имя" id="form-name">
+        <!-- <input type="submit"> -->
+
+
+        <!-- <div id="name"></div> -->
+        <button>Показать форму</button>
+
+        <div class="popup">
+            <div class="popup__container">
+                <div class="popup__wrapper">
+                    <div id="blablabla">
+                        <h2>Проверьте корректность введённых данных:</h2>
+                        <h3>Ваше имя:</h3>
+                        <div id="name"></div>
+                        <h3>Ваша фамилия:</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+
+<script>
+    const button = document.querySelector('button');
+    const form = document.querySelector('#blablabla');
+    const popup = document.querySelector('.popup');
+
+    button.addEventListener('click', () => {
+        form.classList.add('open');
+        popup.classList.add('popup_open');
+        document.getElementById('name').innerHTML = document.getElementById('form-name').value;
+    });
+
+    MyForm.addEventListener('submit', function (e) {
+        e.preventDefault(); //Чтобы форма не отправлялась
+        document.getElementById('name').innerHTML = document.getElementById('form-name').value;
+    });
+
+</script>
+
+</html>

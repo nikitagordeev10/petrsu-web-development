@@ -16,8 +16,7 @@ p,
 .box,
 .counter,
 #counter1,
-#phone,
-textarea {
+#feedback {
     /* text-align: center; */
     margin-left: 30%;
 }
