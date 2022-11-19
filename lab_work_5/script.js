@@ -7,6 +7,7 @@ function Selected(a) {
     currBox = a;
 }
 
+//  Добавление номера телефона пользователя
 var x = 0;
 function addInput() {
     var profile = document.getElementById('profile');
@@ -24,18 +25,40 @@ function delInput() {
 
 
 // Вывод информации о пользователе
-function btnClick() {
-    var Txt1 = "";
-    var Txt2 = "";
-    Txt1 = document.Test.bt.value;
-    Txt2 = document.Test.bt.name;
-    document.getElementById('ex1').innerHTML = "<HR>" +
-        "<p>Вы нажали кнопку: " + Txt1.bold() +
-        " с именем: " + Txt2.bold() + "<\p>" + "<HR>";
+const button = document.querySelector('button');
+const form = document.querySelector('#blablabla');
+const popup = document.querySelector('.popup');
+
+button.addEventListener('click', () => {
+    form.classList.add('open');
+    popup.classList.add('popup_open');
+    document.getElementById('name').innerHTML = document.getElementById('form-name').value;
+});
+
+// Test.addEventListener('submit', function (e) {
+//     var point = 0;
+//     // e.preventDefault(); //Чтобы форма не отправлялась
+//     // document.getElementById('name').innerHTML = document.getElementById('form-name').value;
+//     document.write(point);
+// });
+
+function test() {
+    var point = 0;
+
+    document.write(point);
 }
 
-//
-function asdfClick() {
 
-    document.querySelector('#welcome').innerHTML = '<b>Гость</b>, добро пожаловать на сайт!';
+//  Обязательность полей
+var inputs = [].slice.call(document.querySelectorAll('input[class="necessarily"]'));
+inputs.forEach(function (el) {
+    el.addEventListener('input', checkInputs, false);
+});
+
+function checkInputs() {
+    var empty = inputs.filter(function (el) {
+        return el.value.trim() === '';
+    }).length;
+    button.disabled = empty !== 0;
 }
+checkInputs();

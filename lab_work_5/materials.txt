@@ -28,3 +28,5 @@ https://www.cyberforum.ru/javascript/thread1891502.html
 17 ноября
 https://stackoverflow.com/questions/55472118/html-input-type-for-phone-number
 работа с формами https://htmlweb.ru/java/forms.php
+https://ru.stackoverflow.com/questions/475529/Активация-button-при-наличии-данных-во-всех-input
+https://www.youtube.com/watch?v=QBWWplFkdzw
