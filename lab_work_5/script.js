@@ -35,17 +35,28 @@ button.addEventListener('click', () => {
     document.getElementById('name').innerHTML = document.getElementById('form-name').value;
 });
 
-// Test.addEventListener('submit', function (e) {
-//     var point = 0;
-//     // e.preventDefault(); //Чтобы форма не отправлялась
-//     // document.getElementById('name').innerHTML = document.getElementById('form-name').value;
-//     document.write(point);
-// });
+Test.addEventListener('submit', function (e) {
+    var point = 0;
+    // e.preventDefault(); //Чтобы форма не отправлялась
+    document.getElementById('name').innerHTML = document.getElementById('form-name').value;
+        var x1 = document.getElementById('name').value
+        document.write(x1);
+    document.write(point);
+});
+
+Test.addEventListener('popap_submit', function (e) {
+    var point = 0;
+    e.preventDefault(); //Чтобы форма не отправлялась
+    document.getElementById('name').innerHTML = document.getElementById('form-name').value;
+        var x1 = document.getElementById('name').value
+        document.write(x1);
+    document.write(point);
+});
 
 function test() {
     var point = 0;
-
-    document.write(point);
+    var x1 = document.getElementById('name').value
+    document.write(x1);
 }
 
 
@@ -62,3 +73,7 @@ function checkInputs() {
     button.disabled = empty !== 0;
 }
 checkInputs();
+
+
+// ###########################################################################
+

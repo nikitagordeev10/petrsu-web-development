@@ -72,7 +72,7 @@ input[type="url"] {
     height: 100%;
     top: 0;
     left: 0;
-    background: rgba(17, 17, 17, 0.5);
+    background: rgba(17, 17, 17, 0.9);
     transition: all 0.5s ease;
     display: none;
 }
@@ -82,20 +82,21 @@ input[type="url"] {
 }
 
 .popup__container {
-    position: absolute;
+    /* position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     background: #fff;
     border-radius: 10px;
-    max-width: 588px;
+    max-width: 588px; */
     width: 100%;
 }
 
 #overlay {
     margin-bottom: 5px;
 }
-.popup__wrapper{
+
+.popup__wrapper {
     padding: 40px;
 }
 
@@ -111,4 +112,48 @@ input[type="url"] {
 
 #name {
     line-height: 0px;
+}
+
+/* Блок сообщения */
+.alert {
+    padding: 20px;
+    background-color: green;
+    color: white;
+    margin-bottom: 15px;
+}
+
+/* Крестик */
+.closebtn {
+    /* margin-right: 200px;
+    margin-left: 15px; */
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 26px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.closebtn:hover {
+    color: black;
+}
+
+/* ##################################################################### */
+
+
+/* Крестик */
+.closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 26px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.closebtn:hover {
+    color: black;
 }
