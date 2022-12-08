@@ -1,1 +1,0 @@
-Building a Simple Quiz with HTML, CSS and JavaScript // DEV URL: https://dev.to/sulaimonolaniran/building-a-simple-quiz-with-html-css-and-javascript-4elp (дата обращения: 19.11.2022).

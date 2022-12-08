@@ -1,3 +1,4 @@
+/* ############################### Вся страница ############################### */
 /* Разделитель */
 hr {
     margin: 30px 100px;
@@ -12,29 +13,32 @@ h3,
 p,
 .checkbox,
 .form,
+#show_name,
+#show_email,
 .Validate_Required,
 .box,
 .counter,
 #counter1,
 #feedback,
 button,
-#overlay {
+#overlay1 {
     /* text-align: center; */
     margin-left: 30%;
 }
 
-/* Всплывающее окно */
-.box {
-    display: none;
+.form input {
+    display: block;
 }
 
-/*  */
+/* ############################### Расскажите о себе ############################### */
+/* Ширина строк ввода */
 input[type="text"],
 input[type="email"],
 input[type="url"] {
     width: 400px;
 }
 
+/* Номер телефона */
 .counter {
     display: inline-block;
     width: 15px;
@@ -50,19 +54,23 @@ input[type="url"] {
     background-color: #360581;
 }
 
-.form input {
-    display: block;
+/* ############################### Вопрос 3 — Поля, появляющиеся только после выбора ############################### */
+
+/* Всплывающее окно (чтобы изначально не было) */
+.box {
+    display: none;
 }
 
-/* Всплывающее окно */
-#blablabla {
+/* ############################### Отправка — Всплывающее окно ############################### */
+
+#user_data {
     display: none;
     animation-duration: 1.5s;
     animation-fill-mode: both;
     animation-name: fadeIn;
 }
 
-#blablabla.open {
+#user_data.open {
     display: block;
 }
 
@@ -81,25 +89,31 @@ input[type="url"] {
     display: block;
 }
 
+/* всплывающий контейнер */
 .popup__container {
-    /* position: absolute;
+    position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     background: #fff;
     border-radius: 10px;
-    max-width: 588px; */
+    max-width: 588px;
     width: 100%;
 }
 
-#overlay {
+/* Кнопки */
+#overlay1,
+#overlay2,
+#overlay3 {
     margin-bottom: 5px;
 }
 
+/* всплывающая оболочка */
 .popup__wrapper {
     padding: 40px;
 }
 
+/* Анимация появления popup */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -110,37 +124,10 @@ input[type="url"] {
     }
 }
 
-#name {
+/* Место, в которое подставляется значение имени пользователя */
+#show_name {
     line-height: 0px;
 }
-
-/* Блок сообщения */
-.alert {
-    padding: 20px;
-    background-color: green;
-    color: white;
-    margin-bottom: 15px;
-}
-
-/* Крестик */
-.closebtn {
-    /* margin-right: 200px;
-    margin-left: 15px; */
-    color: white;
-    font-weight: bold;
-    float: right;
-    font-size: 26px;
-    line-height: 20px;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.closebtn:hover {
-    color: black;
-}
-
-/* ##################################################################### */
-
 
 /* Крестик */
 .closebtn {
