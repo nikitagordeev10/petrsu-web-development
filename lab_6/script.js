@@ -14,13 +14,7 @@ function Test() {
     };
 
     // ПОЛУЧЕНИЕ ВЫБРАННЫХ ПОЛЬЗОВАТЕЛЕМ ВАРИАНТОВ  
-    let question1_1 = document.getElementById('distance1').checked;
-    let question1_2 = document.getElementById('distance2').checked;
-    let question1_3 = document.getElementById('distance3').checked;
-
-    let question1_1_value = document.getElementById('distance1').value;
-    let question1_2_value = document.getElementById('distance2').value;
-    let question1_3_value = document.getElementById('distance3').value;
+    let question1 = document.querySelector('input[name="distance"]:checked').value;
 
     let question2 = document.querySelector('[name="number_volumes"]').value;
 
@@ -37,9 +31,7 @@ function Test() {
     let question6 = document.getElementById("question6_text").value;
 
     // ПРОВЕРКА ПРАВИЛЬНОСТИ ОТВЕТОВ 
-    if (question1_1 && question1_1_value == answers.Q1) correctAnswers++;
-    else if (question1_2 && question1_2_value == answers.Q1) correctAnswers++;
-    else if (question1_3 && question1_3_value == answers.Q1) correctAnswers++;
+    if (question1 == answers.Q1) correctAnswers++;
 
     if (question2 == answers.Q2) correctAnswers++;
 
@@ -61,9 +53,9 @@ function Test() {
     else commentResult += "<p>Плохо!</p>";
 
     results.innerHTML = commentResult;
-    msgBg.style.display = 'block';
+    MessageBackground.style.display = 'block';
 }
 
-function CloseMsg() {
-    msgBg.style.display = "none";
+function CloseMessage() {
+    MessageBackground.style.display = "none";
 }

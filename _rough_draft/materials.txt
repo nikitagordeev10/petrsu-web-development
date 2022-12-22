@@ -1,0 +1,13 @@
+Стрелялка:
+jlongster / canvas-game-bootstrap // GitHub URL: https://github.com/jlongster/canvas-game-bootstrap (дата обращения: 07.12.2022).
+Javascript not loading with HTML // stackoverflow URL: https://stackoverflow.com/questions/26423128/javascript-not-loading-with-html (дата обращения: 07.12.2022).
+How to quickly implement a simple canvas maze game with the HTML5 tutorial // ProgrammerSought URL: https://www.programmersought.com/article/39041839612/ (дата обращения: 07.12.2022).
+Создаём игру, используя canvas и спрайты // Хабр URL: https://habr.com/ru/post/184666/ (дата обращения: 07.12.2022).
+HTML 5 Canvas для начинающих // W3 ПРОСВЕЩЕНИЕ URL: http://w3pro.ru/article/html-5-canvas-dlya-nachinayushchikh (дата обращения: 07.12.2022).
+Изображение в качестве ссылки // htmlbook.ru URL: http://htmlbook.ru/content/izobrazhenie-v-kachestve-ssylki (дата обращения: 07.12.2022).
+js move object with arrow keys (only once) // StackOverflow URL: https://stackoverflow.com/questions/33840587/js-move-object-with-arrow-keys-only-once
+C# Delta Time Implementation // StackOverflow URL: https://stackoverflow.com/questions/26110228/c-sharp-delta-time-implementation
+
+Картинки:
+Spaceship Png PNG Image With Transparent Background // toppng URL: https://toppng.com/free-image/spaceship-png-PNG-free-PNG-Images_121875 (дата обращения: 07.12.2022).
+You've found a rare treasure trove of readable, thoughtful essays on game design theory, art and the business of design // LOSTGARDEN URL: https://lostgarden.home.blog/2005/03/27/game-post-mortem-hard-vacuum/

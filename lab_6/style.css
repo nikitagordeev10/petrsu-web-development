@@ -35,22 +35,21 @@ footer {
     width: 100%;
 }
 
-.options {
+.conformity_a {
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
 
-.options2 {
+.conformity_b {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    /* margin: 20px; */
 }
 
 #text {
     margin: 20px;
 }
 
-.message-bg {
+.message_background {
     display: none;
     position: fixed;
     z-index: 1;
