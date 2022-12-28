@@ -50,18 +50,18 @@ pipe[0] = {
 // ========== Анимация ==========
 
 function draw() {
-        // отрисовка фона-космоса
-        ctx.drawImage(bg, 0, 0);
+    // отрисовка фона-космоса
+    ctx.drawImage(bg, 0, 0);
 
     for (var i = 0; i < pipe.length; i++) {
-        // отрисовка препятствий
+        // отрисовка заготовленных препятствий
         ctx.drawImage(pipeUp, pipe[i].x, pipe[i].y);
         ctx.drawImage(pipeBottom, pipe[i].x, pipe[i].y + pipeUp.height + gap);
 
         // продвижение спутников к ракете
         pipe[i].x--;
 
-        // продвижение спутников к ракете
+        // создание новых препятствий
         if (pipe[i].x == 825) {
             pipe.push({
                 x: cvs.width,
@@ -69,28 +69,34 @@ function draw() {
             });
         }
 
-        // Отслеживание прикосновений
-        if (xPos + rocket.width >= pipe[i].x && xPos <= pipe[i].x + pipeUp.width && ((yPos >= pipe[i].y && yPos <= pipe[i].y + pipeUp.height) ||  (yPos + rocket.height <= pipe[i].y + pipeUp.height + gap + pipeBottom.height) && (yPos + rocket.height >= pipe[i].y + pipeUp.height + gap)) // касание между блоков
-        || yPos + rocket.height >= cvs.height - fg.height){ // выход за пределы внизу
+        // Отслеживание столкновений
+        if (xPos + rocket.width >= pipe[i].x && xPos <= pipe[i].x + pipeUp.width && ((yPos >= pipe[i].y && yPos <= pipe[i].y + pipeUp.height) || (yPos + rocket.height <= pipe[i].y + pipeUp.height + gap + pipeBottom.height) && (yPos + rocket.height >= pipe[i].y + pipeUp.height + gap)) // касание между блоков
+            || yPos + rocket.height >= cvs.height - fg.height) { // выход за пределы внизу
             location.reload(); // Перезагрузка страницы
         }
 
+        // Увеличение счётчика обойдённых препятствий
         if (pipe[i].x == 5) {
             score++;
             score_audio.play();
         }
     }
-
-    ctx.drawImage(fg, 0, cvs.height - fg.height);
+    
+    // отрисовка Земли и ракеты
+    ctx.drawImage(fg, 0, cvs.height - fg.height); 
     ctx.drawImage(rocket, xPos, yPos);
 
+    // Притяжение ракеты к Земле
     yPos += grav;
 
+    // Счётчик обойдённых препятствий
     ctx.fillStyle = "#fff";
     ctx.font = "24px Verdana";
     ctx.fillText("Счет: " + score, 10, cvs.height - 20);
-
+    
+    //  перерисовку на следующем кадре анимации
     requestAnimationFrame(draw);
 }
 
+// ========== Первый запуск анимации ==========
 pipeBottom.onload = draw;
