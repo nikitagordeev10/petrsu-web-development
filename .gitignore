@@ -1,8 +1,39 @@
-ads 
-_rough_draft
-lab_1/_probe
-lab_2/_probe
-lab_3/_probe
-lab_4/_probe
-lab_5/_probe
-lab_6/_probe
+# .gitignore
+
+# Игнорировать конфигурацию IDE
+/.idea
+*.iml
+
+# Игнорировать настройки операционной системы
+.DS_Store
+Thumbs.db
+
+# Игнорировать логи и базы данных
+*.log
+*.sql
+*.sqlite
+config.php
+
+# Игнорировать кеш
+/cache
+/public/build
+
+# Игнорировать настроенный PHP.ini
+/php.ini
+
+# Игнорировать установочные файлы Composer
+/composer.phar
+/vendor/
+/composer.lock
+
+# Игнорировать файлы с паролями или ключами
+/config.php
+
+# Игнорировать node_modules (если вы используете npm или yarn)
+/node_modules/
+
+# Не публикуйте файлы и папки, связанные с сборкой
+dist/
+*.map
+*.css.map
+*.js.map
