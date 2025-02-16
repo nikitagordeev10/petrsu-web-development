@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8" />
+    <title>lab_6_gordeev</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <header>
+        <h2>Среда для проведения тестирования</h2>
+    </header>
+
+    <div id="quiz_questions">
+        <section class="Questions">
+            <form id="form">
+                <div class="blok1">
+                    <h3>Правила:</h3>
+                    <p>Всего будет 6 вопросов. Правильных вариантов может быть несколько.</p>
+                    <p><br>Работу выполнил:<br>Гордеев Никита<br>ПетрГУ, группа 22207<br>2022</p>
+                </div>
+
+                <div class="blok2">
+                    <h3>Вопрос 1</h3> <!-- Выбор одного варианта -->
+                    <p>Каково средние расстояние от Земли до Луны?</p>
+                    <p><input id="distance1" type="radio" name="distance" value="148 450 км">148 450 км</p>
+                    <p><input id="distance2" type="radio" name="distance" value="384 467 км">384 467 км</p>
+                    <p><input id="distance3" type="radio" name="distance" value="149 600 000 км">149 600 000 км</p>
+                    <p><input id="distance4" type="radio" name="distance" value="100 км">100 км</p>
+                    <p><input id="distance5" type="radio" name="distance" value="200 км">200 км</p>
+
+                </div>
+
+                <div class="blok3">
+                    <h3>Вопрос 2</h3> <!-- Выпадающий список -->
+                    <p>Сколько томов в романе Льва Толстого «Война и мир»?</p>
+                    <p><select id="number_volumes" name="number_volumes">
+                            <option>Выберите из списка</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                        </select></p>
+                </div>
+
+                <div class="blok4">
+                    <h3>Вопрос 3</h3> <!-- Множественный выбор -->
+                    <p>Три важнейших закона классической механики — это ...?</p>
+                    <p><input type="checkbox" name="3_a" value="Законы Галилея">Законы Галилея</p>
+                    <p><input type="checkbox" name="3_b" value="Законы Коперника">Законы Коперника</p>
+                    <p><input type="checkbox" name="3_c" value="Законы Ньютона">Законы Ньютона</p>
+                </div>
+
+                <div class="blok5">
+                    <h3>Вопрос 4</h3> <!-- Ввод числа -->
+                    <p>В каком году в России отменили крепостное право?</p>
+                    <input type="number" name="serfdom" step="1" min="1800" max="2000"><br><br>
+                </div>
+
+                <div class="blok6">
+                    <h3>Вопрос 5</h3> <!-- Вопросы на соответсвие -->
+                    <p> К какой части света географически относится: </p>
+                    <div class="conformity_a">
+                        <div>
+                            <p>
+                                A. Китай<br>
+                                B. Доминикана<br>
+                                C. Чехия
+                            </p>
+                        </div>
+                        <div>
+                            <p>
+                                1. Европа<br>
+                                2. Америка<br>
+                                3. Азия
+                            </p>
+                        </div>
+                    </div>
+                    <div class="conformity_b">
+                        <div>
+                            <p>A <input type="number" name="5_a" min="1" max="3"><br></p>
+                        </div>
+                        <div>
+                            <p>B <input type="number" name="5_b" min="1" max="3"><br></p>
+                        </div>
+                        <div>
+                            <p>C <input type="number" name="5_c" min="1" max="3"></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="blok7">
+                    <h3>Вопрос 6</h3> <!-- Ввод текста -->
+                    <p>Эта сельскохозяйственная культура по сравнению с другими занимает самые большие площади на
+                        планете.</p>
+                    <input id="question6_text" type="text" name="text" value=""><br>
+                </div>
+
+                <div class="blok8">
+                    <h3>Результаты</h3>
+                    <input class="submit" type="button" name="submit" value="Отправить" onclick="Test()">
+                    <input type="reset" value="Очистить форму">
+                </div>
+
+            </form>
+        </section>
+    </div>
+
+
+    <div id="MessageBackground" class="message_background">
+        <div id="msg" class="message">
+            <span class="close" onclick="CloseMessage()">×</span>
+            <h2>Результаты</h2>
+            <div id="results">
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

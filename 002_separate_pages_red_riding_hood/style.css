@@ -1,0 +1,147 @@
+/* Селектор тегов */
+
+body {
+    background-image: url("http://kappa.cs.petrsu.ru/~chistyak/html/images/fon.jpg");
+}
+
+a {
+    text-decoration: none !important;
+    border: none !important;
+}
+
+h1 {
+    text-transform: uppercase;
+}
+
+table {
+    width: 100%;
+    /* border-collapse: collapse;
+    border: 1px solid black; */
+}
+
+td {
+    padding: 5px;
+    vertical-align: top;
+    text-align: left;
+    /* border: 1px solid black; */
+}
+
+p {
+    font-size: 21px;
+    color: #336699;
+}
+
+/* Селектор класса */
+.text_style_header {
+    color: #FF0099;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+.text_style_content_header {
+    color: #FF0099;
+    text-align: left;
+    font-family: 'Roboto', sans-serif;
+}
+
+.text_style_content {
+    text-align: left;
+    color: #AA00DD;
+}
+
+.images_left {
+    width: 20%;
+    float: left;
+    padding: 0 20px 20px 0;
+}
+
+.images_right {
+    width: 20%;
+    float: right;
+    padding: 0 20px 20px 0;
+}
+
+.text_style_menu {
+    color: #336699;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+.p_bottom {
+    text-align: right;
+    color: #AA00DD;
+}
+
+.style_table_header {
+    background-color: #FFEEEE;
+    text-align: center;
+}
+
+.style_table_text_center {
+    background-color: #FAFFFA;
+    text-align: center;
+}
+
+.style_table_text_left {
+    background-color: #FAFFFA;
+}
+
+.separator {
+    height: 305px;
+}
+
+.menu_table {
+    border: 1px solid blue;
+    width: 50%;
+    margin: auto;
+
+}
+
+.menu_table td {
+    border: 1px solid blue;
+    margin: auto;
+}
+
+/* Селектор идентификатора */
+
+#body_content {
+    width: 15%;
+}
+
+#body_separator {
+    width: 1%;
+}
+
+#body_body {
+    width: 84%;
+}
+
+#header {
+    width: 100%;
+}
+
+#footer {
+    width: 100%;
+}
+
+/* Селектор тегов  */
+
+/* Селектор атрибутов */
+a[href="1_introduction.html"] { font-style: italic; }
+
+/* Селектор пседоэлементов */
+a:link {
+    color: #033;
+}
+
+a:visited {
+    color: #606;
+}
+
+a:hover {
+    color: #f00;
+}
+
+a:active {
+    color: #ff0;
+}

@@ -1,0 +1,5 @@
+CSS-Grid VS Flexbox // proglib URL: https://proglib.io/p/css-grid-vs-flexbox (дата обращения: 27.10.2022).
+Красная Шапочка // Википедия URL: https://ru.wikipedia.org/wiki/Красная_Шапочка (дата обращения: 01.11.2022).
+«Алгоритм автоматического размещения» CSS grid-auto-flow // WebforMyself URL: https://webformyself.com/algoritm-avtomaticheskogo-razmeshheniya-css-grid-auto-flow/ (дата обращения: 02.11.2022).
+Как реализовать автоматический перенос блоков на след.строку при сужении экрана? // stackoverflow URL: https://ru.stackoverflow.com/questions/902577/Как-реализовать-автоматический-перенос-блоков-на-след-строку-при-сужении-экрана (дата обращения: 02.11.2022).
+Семантические элементы HTML5 // msiter.ru URL: https://msiter.ru/tutorials/html5/semantic_elements (дата обращения: 03.11.2022).

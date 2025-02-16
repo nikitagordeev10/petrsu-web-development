@@ -1,0 +1,146 @@
+/* ############################### Вся страница ############################### */
+/* Разделитель */
+hr {
+    margin: 30px 100px;
+    border: 0;
+    border-top: 1px solid #c9c7c7;
+}
+
+/* Отступ от края экрана */
+h1,
+h2,
+h3,
+p,
+.checkbox,
+.form,
+#show_name,
+#show_email,
+.Validate_Required,
+.box,
+.counter,
+#counter1,
+#feedback,
+button,
+#overlay1 {
+    /* text-align: center; */
+    margin-left: 30%;
+}
+
+.form input {
+    display: block;
+}
+
+/* ############################### Расскажите о себе ############################### */
+/* Ширина строк ввода */
+input[type="text"],
+input[type="email"],
+input[type="url"] {
+    width: 400px;
+}
+
+/* Номер телефона */
+.counter {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    line-height: 15px;
+    text-align: center;
+    border: 1px dashed grey;
+    margin: 0px 0;
+}
+
+.counter:hover {
+    cursor: pointer;
+    background-color: #360581;
+}
+
+/* ############################### Вопрос 3 — Поля, появляющиеся только после выбора ############################### */
+
+/* Всплывающее окно (чтобы изначально не было) */
+.box {
+    display: none;
+}
+
+/* ############################### Отправка — Всплывающее окно ############################### */
+
+#user_data {
+    display: none;
+    animation-duration: 1.5s;
+    animation-fill-mode: both;
+    animation-name: fadeIn;
+}
+
+#user_data.open {
+    display: block;
+}
+
+.popup {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(17, 17, 17, 0.9);
+    transition: all 0.5s ease;
+    display: none;
+}
+
+.popup_open {
+    display: block;
+}
+
+/* всплывающий контейнер */
+.popup__container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    border-radius: 10px;
+    max-width: 588px;
+    width: 100%;
+}
+
+/* Кнопки */
+#overlay1,
+#overlay2,
+#overlay3 {
+    margin-bottom: 5px;
+}
+
+/* всплывающая оболочка */
+.popup__wrapper {
+    padding: 40px;
+}
+
+/* Анимация появления popup */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Место, в которое подставляется значение имени пользователя */
+#show_name {
+    line-height: 0px;
+}
+
+/* Крестик */
+.closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 26px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.closebtn:hover {
+    color: black;
+}
