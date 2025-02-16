@@ -15,3 +15,4 @@
 9. Использование функций PHP 	
 10. Разработка приложений для Web 	
 11. MySQL + Yii: CRUD  
+12. MySQL + Yii: upload, authentication  
